@@ -1,0 +1,38 @@
+# This is Git's per-user configuration file.
+[user]
+	email = luis.amor.alvarez@gmail.com
+	name = Luis Amor
+[push]
+	default = simple
+[alias]
+	lg = log --oneline --decorate --all --graph
+	st = status
+	ci = commit
+	
+[merge]
+ tool = kdiff3
+ 
+[mergetool "kdiff3"]
+ cmd = 'C:/Program Files/KDiff3/kdiff3.exe' $BASE $LOCAL $REMOTE -o $MERGED
+ keepBackup = false
+ trustExitCode = false
+ 
+[diff]
+ tool = kdiff3
+ guitool = kdiff3
+ 
+[difftool "kdiff3"]
+ path = c:/Program Files/KDiff3/kdiff3.exe
+ 
+[core]
+	autocrlf = true
+	excludesfile = C:\\Users\\luisamor\\Documents\\gitignore_global.txt
+
+	
+[difftool "sourcetree"]
+	cmd = 'C:/Program Files/KDiff3/kdiff3.exe' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = 'C:/Program Files/KDiff3/kdiff3.exe' \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+	trustExitCode = true
+[gc]
+	auto = 0
